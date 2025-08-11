@@ -1,0 +1,25 @@
+{
+  "name": "wp-calypso-pw-test",
+  "version": "1.0.0",
+  "description": "Playwright Test POC for WP Calypso",
+  "homepage": "https://github.com/alisterscott/wp-calypso-pw-test#readme",
+  "bugs": {
+    "url": "https://github.com/alisterscott/wp-calypso-pw-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alisterscott/wp-calypso-pw-test.git"
+  },
+  "license": "UNLICENSED",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.2.1",
+    "playwright": "^1.54.2"
+  }
+}
