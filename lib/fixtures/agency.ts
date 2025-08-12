@@ -1,3 +1,5 @@
+import { getRandomFirstName, getRandomLastName } from '../testdata/names';
+
 export class Agency {
 	firstName: string;
 	lastName: string;
@@ -7,8 +9,8 @@ export class Agency {
 	phoneNumber: string;
 
 	constructor() {
-		this.firstName = 'Ricardo “Cactus”';
-		this.lastName = 'Mendoza';
+		this.firstName = getRandomFirstName();
+		this.lastName = getRandomLastName();
 		this.agencyName = 'El Tigre Web Design';
 		this.businessUrl = 'https://eltigrewebdesign.com';
 		this.countryCode = 'AU';
@@ -27,8 +29,8 @@ export class AdvancedAgency {
 
 	constructor() {
 		this.fieldValues = [
-			{ label: 'Your first name *', value: 'Ricardo “Cactus”', role: 'textbox' },
-			{ label: 'Last name *', value: 'Mendoza', role: 'textbox' },
+			{ label: 'Your first name *', value: getRandomFirstName(), role: 'textbox' },
+			{ label: 'Last name *', value: getRandomLastName(), role: 'textbox' },
 			{ label: 'Agency name *', value: 'El Tigre Web Design', role: 'textbox' },
 			{ label: 'Business URL *', value: 'https://eltigrewebdesign.com', role: 'textbox' },
 			{ label: 'Country code', value: 'AU', role: 'combobox' },
