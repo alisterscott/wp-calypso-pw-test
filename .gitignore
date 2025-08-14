@@ -144,3 +144,5 @@ vite.config.ts.timestamp-*
 /blob-report/
 /playwright/.cache/
 .DS_Store
+secrets/decrypted-secrets.json
+/secrets/storagestate
