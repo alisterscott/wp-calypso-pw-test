@@ -20,7 +20,9 @@ jobs:
       - name: Run Playwright tests
         env:
           MY_E2E_SECRETS_KEY: ${{ secrets.MY_E2E_SECRETS_KEY }}
-        run: npx playwright test
+        run: |
+          npm run decrypt-secrets
+          npx playwright test
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
