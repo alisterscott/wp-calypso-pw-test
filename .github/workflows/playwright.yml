@@ -9,6 +9,8 @@ jobs:
   test:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    env:
+      HOME: /root
     container:
       image: mcr.microsoft.com/playwright:v1.54.2-jammy
     steps:
