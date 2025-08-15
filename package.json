@@ -15,7 +15,9 @@
 	"type": "commonjs",
 	"main": "index.js",
 	"scripts": {
-		"test": "test"
+		"test": "test",
+		"encrypt-secrets": "openssl enc -aes-256-cbc -pbkdf2 -iter 100000 -pass env:MY_E2E_SECRETS_KEY -out ./secrets/encrypted.enc -in ./secrets/decrypted-secrets.json",
+		"decrypt-secrets": "rm -f ./secrets/decrypted-secrets.json; openssl enc -aes-256-cbc -d -pbkdf2 -iter 100000 -pass env:MY_E2E_SECRETS_KEY -in ./secrets/encrypted.enc -out ./secrets/decrypted-secrets.json"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.54.2",
