@@ -9,7 +9,7 @@ test.describe('Automattic For Agencies Sign Up Page', () => {
 		});
 	}
 
-	test('As web agency owner I see the correct page title', async ({ pageDefaultUser }) => {
+	test('As web agency owner I can see the correct page title', async ({ pageDefaultUser }) => {
 		await givenIAmOnTheSignUpPage(pageDefaultUser);
 		await test.step('Then I can see the correct page title to give me confidence I am on the correct site', async () => {
 			await expect(pageDefaultUser).toHaveTitle('Automattic For Agencies');
