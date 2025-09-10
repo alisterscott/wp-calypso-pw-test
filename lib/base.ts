@@ -52,7 +52,7 @@ export const test = base.extend<{
 			await page.goto('https://wordpress.com/log-in');
 			await page.getByRole('textbox', { name: 'Email address or username' }).fill(username);
 			await page.getByRole('button', { name: 'Continue', exact: true }).click();
-			await page.getByRole('textbox', { name: 'Passwordhajshdjhsd' }).fill(password);
+			await page.getByRole('textbox', { name: 'Password' }).fill(password);
 			await page.getByRole('button', { name: 'Log In', exact: true }).click();
 			await page.getByRole('heading', { name: 'My Home' }).waitFor({ state: 'visible' });
 
